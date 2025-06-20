@@ -1,7 +1,7 @@
 # devops-assigment
 job assigment appscrip
 
-# DevOps Assignment: Nginx Deployment using Docker & Terraform
+# 🚀 DevOps Assignment: Nginx Deployment using Docker & Terraform
 
 ## 📁 Project Overview
 
@@ -15,8 +15,9 @@ This project demonstrates two core DevOps skills:
 ## 🧩 Task 1: Dockerize Nginx with a Custom HTML Page
 
 ### ✅ Objective
+
 - Create a Docker image that runs a custom Nginx server using your own `index.html`.
-- Run it locally on Docker.
+- Run it locally using Docker.
 - Optionally, push the image to Docker Hub.
 
 ### 📂 Steps
@@ -38,7 +39,8 @@ Edit
     <h1>Hello, this is a custom Nginx page running in Docker!</h1>
 </body>
 </html>
-3. Create Dockerfile
+
+#c3. Create Dockerfile
 Dockerfile
 Copy
 Edit
@@ -55,28 +57,30 @@ Copy
 Edit
 docker run -d -p 8080:80 my-nginx-app
 6. Test in Browser
-Open:
+Open this URL in your browser:
 
 arduino
 Copy
 Edit
 http://localhost:8080
+
+
 ☁️ Task 2: Launch EC2 with Nginx using Terraform
 ✅ Objective
 Use Terraform to launch an EC2 instance on AWS.
 
 Install Nginx using user_data.
 
-Create security group to allow SSH and HTTP access.
+Create a security group to allow SSH and HTTP access.
 
 Output the public IP for browser access.
 
 ⚙️ Prerequisites
 Terraform installed
 
-AWS CLI installed and configured
+AWS CLI installed and configured (aws configure)
 
-AWS account (Free Tier)
+AWS account (Free Tier eligible)
 
 Code Editor (e.g., VS Code with Terraform extension)
 
@@ -122,7 +126,7 @@ resource "aws_security_group" "allow_ssh_http" {
 }
 
 resource "aws_instance" "nginx_server" {
-  ami           = "ami-0c02fb55956c7d316" # Amazon Linux 2
+  ami           = "ami-0c02fb55956c7d316" # Amazon Linux 2 AMI
   instance_type = "t2.micro"
   security_groups = [aws_security_group.allow_ssh_http.name]
 
@@ -155,7 +159,7 @@ terraform apply
 Type yes when prompted to approve the plan.
 
 5. Access Nginx in Browser
-Once applied, copy the outputted public_ip and visit:
+After the instance is created, Terraform will output the public_ip. Open this in your browser:
 
 cpp
 Copy
@@ -167,16 +171,16 @@ cpp
 Copy
 Edit
 http://98.81.216.8/
-📸 Screenshots
-Dockerized Nginx running on localhost
+📸 Suggested Screenshots
+Dockerized Nginx running on localhost:8080
 
-Terraform output showing public IP
+Terraform CLI output showing the public IP
 
-AWS Console showing EC2 instance and security group
+AWS Console showing the running EC2 instance
 
-Nginx running in browser via EC2 public IP
+Nginx home page running in the browser via EC2
 
-VS Code showing folder and file structure
+Folder structure in VS Code
 
 📦 Directory Structure
 css
@@ -189,25 +193,16 @@ Edit
 └── terraform-ec2-nginx
     └── main.tf
 ✅ Conclusion
-This project shows hands-on experience with:
+This project demonstrates:
 
-Docker containerization
+✅ Docker containerization of Nginx
 
-AWS EC2 provisioning
+✅ AWS EC2 provisioning
 
-Terraform IaC practices
+✅ Infrastructure as Code using Terraform
 
-Nginx web server deployment both locally and on cloud infrastructure
+✅ Web server deployment both locally and in the cloud
 
 ✍️ Author
 Kamlesh Parihar
-LinkedIn | GitHub (replace with your actual username)
-
-yaml
-Copy
-Edit
-
----
-
-Let me know if you'd like this in `.md` format for download or need screenshots added to the READM
-cd docker-nginx
+🔗 LinkedIn
